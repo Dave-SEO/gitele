@@ -1,13 +1,15 @@
 <template>
-  <div class="header">
-    <headers :sellers="seller"></headers>
+  <div id="app">
+    <div class="header">
+      <headers :sellers="seller"></headers>
+    </div>
+    <div class="tab border_1px">
+      <div class="item-tab"><a href="#" v-link="{ path: '/goods' }">商品</a></div>
+      <div class="item-tab"><a href="#" v-link="{ path: '/seller' }">商家</a></div>
+      <div class="item-tab"><a href="#" v-link="{ path: '/ratings' }">评价</a></div>
+    </div>
+    <router-view :sellers="seller" keep-alive></router-view>
   </div>
-  <div class="tab border_1px">
-    <div class="item-tab"><a href="#" v-link="{ path: '/goods' }">商品</a></div>
-    <div class="item-tab"><a href="#" v-link="{ path: '/seller' }">商家</a></div>
-    <div class="item-tab"><a href="#" v-link="{ path: '/ratings' }">评价</a></div>
-  </div>
-  <router-view :sellers="seller" keep-alive></router-view>
 </template>
 
 <script type="text/ecmascript-6">

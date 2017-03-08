@@ -3,6 +3,7 @@
     <div>
       <div class="food-img">
         <img  alt=""  v-lazy="foody.image">
+        <videos></videos>
       </div>
       <div class="back" @click.stop.prevent="back"><i class="iconfont icon-arrow_lift"></i></div>
       <div class="food-con">
@@ -33,7 +34,7 @@
             <li v-for="foodlist in foody.ratings" class="rating-item" v-show="needrating(foodlist.rateType,foodlist.text)">
               <div style="overflow: hidden">
                 <span class="time">{{foodlist.rateTime | formaDate}}</span>
-                <div class="user">
+                <div class="user">z
                   <span class="username">{{foodlist.username}}</span>
                   <img class="username-icon" :src="foodlist.avatar">
                 </div>
@@ -61,6 +62,7 @@
   import Vue from 'vue';
   import split from 'components/split/split';
   import ratings from 'components/ratingselect/ratingselect';
+  import videos from 'components/videos/videos';
   import {formaDate} from 'common/js/date.js';
   export default {
     data () {
@@ -136,7 +138,8 @@
     components: {
       carcontrol,
       split,
-      ratings
+      ratings,
+      videos
     }
   };
 </script>

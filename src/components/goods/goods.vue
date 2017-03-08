@@ -142,7 +142,7 @@
         if (!event._constructed) {
           return;
         }
-        let foodsArray = this.$els.foodsWrap.getElementsByClassName('foods-hook');
+        let foodsArray = this.$els.foodsWrap.getElementsByClassName('foods-hook'); // 拿到的是一个数组
         let item = foodsArray[index]; // 找到指定的元素
         this.goodsScroll.scrollToElement(item, 300); // 跳转到指定的元素
       },
